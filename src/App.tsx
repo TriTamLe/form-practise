@@ -1,6 +1,6 @@
+import { LoginForm } from '@pages'
 import { ConfigProvider, Flex, Typography } from 'antd'
 import './App.css'
-import { LoginForm } from './pages'
 
 function App() {
   return (

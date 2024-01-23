@@ -10,6 +10,10 @@
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
     "useDefineForClassFields": true,
+    "baseUrl": "./",
+    "paths": {
+      "@*": ["src/*"]
+    }
   },
   "include": ["src"]
 }
