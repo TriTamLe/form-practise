@@ -1,0 +1,27 @@
+import { Button, FormInstance } from 'antd'
+import useFormInstance from 'antd/es/form/hooks/useFormInstance'
+import { memo } from 'react'
+
+export type TFormFooter = {
+  submitButtonTitle?: string
+}
+
+const viewData = (form: FormInstance) => {
+  console.log(form.getFieldsValue(true))
+}
+
+const FormFooter = ({ submitButtonTitle = 'Complete' }: TFormFooter) => {
+  const form = useFormInstance()
+  return (
+    <div className='absolute bottom-[2%] right-[2%] w-full rounded-md shadow-md p-5 flex flex-row items-center justify-end gap-3'>
+      <Button size='large' htmlType='button' onClick={() => viewData(form)}>
+        Cancel
+      </Button>
+      <Button size='large' htmlType='submit' type='primary'>
+        {submitButtonTitle}
+      </Button>
+    </div>
+  )
+}
+
+export const MemoizedFormFooter = memo(FormFooter)
