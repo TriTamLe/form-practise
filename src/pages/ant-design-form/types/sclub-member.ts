@@ -3,7 +3,7 @@ import { CountryIso2 } from 'react-international-phone'
 import { SCLUB_MEMBER_KEYS } from '../constant'
 import { THouse } from './house'
 import { TMemeberType } from './member-type'
-import { TRole, TRoles } from './roles'
+import { TRoles } from './roles'
 
 export type TSClubMember = {
   [SCLUB_MEMBER_KEYS.EMAIL]: string
@@ -22,6 +22,5 @@ export type TSClubMember = {
   [SCLUB_MEMBER_KEYS.HOUSE]: THouse
   [SCLUB_MEMBER_KEYS.PARTICIPANT_TERM]: string
   [SCLUB_MEMBER_KEYS.HASROLE]?: boolean
-  [SCLUB_MEMBER_KEYS.ROLE]?: TRole
   [SCLUB_MEMBER_KEYS.ROLES]?: TRoles[]
 }
