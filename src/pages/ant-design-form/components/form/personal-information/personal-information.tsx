@@ -7,6 +7,7 @@ import {
   VALIDATION_MESSAGES,
   requiredRule,
 } from '@pages'
+import { useGetUniversities } from '@pages/ant-design-form/api'
 import { DatePicker, Flex, Input, Typography } from 'antd'
 import { Rule } from 'antd/es/form'
 import { CustomFormItem } from '../..'
@@ -17,6 +18,11 @@ export const PersonalInformationForm = () => {
     birthDay: [requiredRule(VALIDATION_MESSAGES.BIRTHDAY.REQUIRED)],
     address: [requiredRule(VALIDATION_MESSAGES.ADDRESS.REQUIRED)],
   }
+
+  const { data, isLoading } = useGetUniversities()
+
+  if (isLoading) return <div>Loading...</div>
+  console.log(data)
 
   return (
     <Flex vertical align='center' gap={20}>

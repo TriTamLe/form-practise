@@ -1,11 +1,13 @@
 import { Form } from 'antd'
+import {
+  AccountInformationForm,
+  MemoizedFormFooter,
+  MemoizedFormSteps,
+  PersonalInformationForm,
+} from '.'
 import { FORM_STEP_ITEMS, FORM_STEP_NUMBER } from '../constant/form-steps'
 import { useLoginForm } from '../hooks'
 import { TSClubMember } from '../types'
-import { AccountInformationForm } from './account-information'
-import { MemoizedFormFooter } from './custom-components/form-footer'
-import { MemoizedFormSteps } from './custom-components/form-steps'
-import { PersonalInformationForm } from './personal-information'
 
 export const LoginForm = () => {
   const {
