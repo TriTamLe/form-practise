@@ -12,25 +12,43 @@ axios.interceptors.request.use((config: InternalAxiosRequestConfig) => {
   return config
 })
 
+type TUniversityResponse = {
+  name: string
+  domains: string[]
+}
+
+type TUniversityOption = {
+  label: string
+  value: string
+}
+
+const transformUniversityResponseToOption = (
+  data: TUniversityResponse[]
+): TUniversityOption[] => {
+  return data.map((university) => ({
+    label: university.name,
+    value: university.domains[0],
+  }))
+}
+
 export const getUniversitiesFn = async ({
   queryKey,
 }: {
-  queryKey: [string]
-}) => {
-  const [_key] = queryKey
-  console.log('get')
+  queryKey: [string, { name: string }]
+}): Promise<TUniversityResponse[]> => {
+  const [_key, { name }] = queryKey
   const response = await axios.get('/search', {
     params: {
+      name,
       country: 'Viet Nam',
     },
   })
-  console.log(response.data)
   return response.data
 }
 
-export const useGetUniversities = () => {
-  return useQuery({
-    queryKey: [QUERY_KEYS.GET_UNIVERSITIES],
+export const useGetUniversities = ({ name }: { name: string }) =>
+  useQuery({
+    queryKey: [QUERY_KEYS.GET_UNIVERSITIES, { name }],
     queryFn: getUniversitiesFn,
+    select: transformUniversityResponseToOption,
   })
-}

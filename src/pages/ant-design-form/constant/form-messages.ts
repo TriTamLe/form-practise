@@ -6,6 +6,7 @@ export const PLACEHOLDERS = {
   PHONE: 'Enter your phone number',
   BIRTHDAY: 'YYYY-MM-DD',
   ADDRESS: 'Enter your address',
+  MAJOR: 'Enter your major',
 }
 
 export const LABELS = {
@@ -16,6 +17,7 @@ export const LABELS = {
   FULL_NAME: 'Full name',
   BIRTHDAY: 'Birthday',
   ADDRESS: 'Address',
+  MAJOR: 'Major',
 }
 
 export const VALIDATION_MESSAGES = {

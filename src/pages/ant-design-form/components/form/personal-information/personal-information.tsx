@@ -7,10 +7,10 @@ import {
   VALIDATION_MESSAGES,
   requiredRule,
 } from '@pages'
-import { useGetUniversities } from '@pages/ant-design-form/api'
 import { DatePicker, Flex, Input, Typography } from 'antd'
 import { Rule } from 'antd/es/form'
 import { CustomFormItem } from '../..'
+import { MemoizedSelectUniversity } from './select-university'
 
 export const PersonalInformationForm = () => {
   const rules: Record<string, Rule[]> = {
@@ -18,11 +18,6 @@ export const PersonalInformationForm = () => {
     birthDay: [requiredRule(VALIDATION_MESSAGES.BIRTHDAY.REQUIRED)],
     address: [requiredRule(VALIDATION_MESSAGES.ADDRESS.REQUIRED)],
   }
-
-  const { data, isLoading } = useGetUniversities()
-
-  if (isLoading) return <div>Loading...</div>
-  console.log(data)
 
   return (
     <Flex vertical align='center' gap={20}>
@@ -66,6 +61,14 @@ export const PersonalInformationForm = () => {
           required
           rules={rules.address}>
           <Input size='large' placeholder={PLACEHOLDERS.ADDRESS} />
+        </CustomFormItem>
+        <MemoizedSelectUniversity />
+        <CustomFormItem
+          name={SCLUB_MEMBER_KEYS.MAJOR}
+          label={LABELS.MAJOR}
+          required
+          rules={rules.address}>
+          <Input size='large' placeholder={PLACEHOLDERS.MAJOR} />
         </CustomFormItem>
       </div>
     </Flex>
