@@ -10,13 +10,14 @@ import {
 import { DatePicker, Flex, Input, Typography } from 'antd'
 import { Rule } from 'antd/es/form'
 import { CustomFormItem } from '../..'
-import { MemoizedSelectUniversity } from './select-university'
+import { MemoizedUniversitySelectFormItem } from './university-select'
 
 export const PersonalInformationForm = () => {
   const rules: Record<string, Rule[]> = {
     fullName: [requiredRule(VALIDATION_MESSAGES.FULL_NAME.REQUIRED)],
     birthDay: [requiredRule(VALIDATION_MESSAGES.BIRTHDAY.REQUIRED)],
     address: [requiredRule(VALIDATION_MESSAGES.ADDRESS.REQUIRED)],
+    university: [requiredRule(VALIDATION_MESSAGES.UNIVERSITY.REQUIRED)],
   }
 
   return (
@@ -62,7 +63,16 @@ export const PersonalInformationForm = () => {
           rules={rules.address}>
           <Input size='large' placeholder={PLACEHOLDERS.ADDRESS} />
         </CustomFormItem>
-        <MemoizedSelectUniversity />
+        <MemoizedUniversitySelectFormItem
+          name={SCLUB_MEMBER_KEYS.UNIVERSITY}
+          label={LABELS.UNIVERSITY}
+          required
+          rules={rules.university}
+          autoCompleteProps={{
+            size: 'large',
+            placeholder: PLACEHOLDERS.UNIVERSITY,
+          }}
+        />
         <CustomFormItem
           name={SCLUB_MEMBER_KEYS.MAJOR}
           label={LABELS.MAJOR}

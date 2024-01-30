@@ -4,15 +4,19 @@ import { TStepInformation } from '../../types'
 
 export type TFormSteps = {
   stepInformation: TStepInformation
-  items: StepsProps['items']
   onChangeStep?: (step: number) => void
-}
+} & StepsProps
 
 const handleGetWhiteList = (current: number): number[] => {
   return Array.from({ length: current + 1 }, (_, i) => i)
 }
 
-const FormSteps = ({ stepInformation, onChangeStep, items }: TFormSteps) => {
+const FormSteps = ({
+  stepInformation,
+  onChangeStep,
+  items,
+  ...props
+}: TFormSteps) => {
   const [stepStatus, setStepStatus] =
     useState<TStepInformation>(stepInformation)
 
@@ -39,8 +43,8 @@ const FormSteps = ({ stepInformation, onChangeStep, items }: TFormSteps) => {
 
   return (
     <Steps
-      direction='vertical'
-      className='w-[300px]  h-fit'
+      {...props}
+      className='w-[300px] h-fit'
       current={stepStatus.currentStep}
       items={items}
       progressDot

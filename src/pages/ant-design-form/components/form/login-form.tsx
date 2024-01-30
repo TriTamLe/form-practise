@@ -15,19 +15,23 @@ export const LoginForm = () => {
     currentStep,
     onChangeStep,
     submitButtonTitle,
+    formLayout,
+    stepDirection,
   } = useLoginForm()
 
   return (
     <Form<TSClubMember>
       form={form}
-      className='w-full h-full flex flex-row gap-5'
+      className='w-full h-full flex md:flex-row flex-col gap-5'
+      layout={formLayout}
       onFinish={onFinish}>
       <MemoizedFormSteps
         stepInformation={stepInformation}
         items={FORM_STEP_ITEMS}
         onChangeStep={onChangeStep}
+        direction={stepDirection}
       />
-      <div className='w-full relative'>
+      <div className='w-full h-full relative'>
         {currentStep === FORM_STEP_NUMBER.ACCOUNT_INFORMATION && (
           <AccountInformationForm />
         )}

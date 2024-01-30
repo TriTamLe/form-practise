@@ -11,7 +11,10 @@ export const CountryCodeSelector = ({
   hideCountryName = false,
 }: TCountryCodeSelector) => {
   return (
-    <Form.Item name={[name, countryFieldName]} initialValue={initialValue}>
+    <Form.Item
+      name={[name, countryFieldName]}
+      initialValue={initialValue}
+      className='m-0'>
       <Select size='large' {...selectProps}>
         {defaultCountries.map((countryData) => {
           const countryName = countryData[0]
