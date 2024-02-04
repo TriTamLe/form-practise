@@ -1,6 +1,6 @@
 import { Rule, RuleObject } from 'antd/es/form'
 import { StoreValue } from 'antd/es/form/interface'
-import { passwordPattern } from '../../constant/regex-pattern'
+import { passwordPattern } from '../../constant/form/regex-pattern'
 import { formatCheck } from './format-check'
 
 export const passwordFormat =

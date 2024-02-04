@@ -1,4 +1,4 @@
-export const SCLUB_MEMBER_KEYS = {
+export const SCLUB_MEMBER_FORM_NAMES = {
   EMAIL: 'email',
   PASSWORD: 'password',
   CONFIRM_PASSWORD: 'confirmPassword',

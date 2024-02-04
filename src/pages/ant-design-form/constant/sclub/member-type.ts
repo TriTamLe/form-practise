@@ -1,4 +1,4 @@
-import { OptionType } from '../types'
+import { OptionType } from '../../types'
 
 export const MEMBER_TYPE = {
   OLD_MEMEBER: 'oldMember',

@@ -1,1 +1,1 @@
-export * from './personal-information.tsx'
+export * from './get-universities'

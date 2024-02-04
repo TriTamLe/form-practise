@@ -3,7 +3,7 @@ import {
   DATE_FORMAT,
   LABELS,
   PLACEHOLDERS,
-  SCLUB_MEMBER_KEYS,
+  SCLUB_MEMBER_FORM_NAMES,
   VALIDATION_MESSAGES,
   requiredRule,
 } from '@pages'
@@ -25,7 +25,7 @@ export const PersonalInformationForm = () => {
       <Typography.Title level={2}>Personal Information</Typography.Title>
       <div className='w-full max-w-[70%] px-20'>
         <CustomFormItem
-          name={SCLUB_MEMBER_KEYS.FULL_NAME}
+          name={SCLUB_MEMBER_FORM_NAMES.FULL_NAME}
           label={LABELS.FULL_NAME}
           required
           rules={rules.fullName}>
@@ -34,9 +34,9 @@ export const PersonalInformationForm = () => {
         <PhoneInputField
           labelAlign='left'
           labelCol={{ span: 5 }}
-          name={SCLUB_MEMBER_KEYS.PHONE}
-          countryFieldName={SCLUB_MEMBER_KEYS.DIAL_CODE}
-          phoneFieldName={SCLUB_MEMBER_KEYS.PHOME_NUMBER}
+          name={SCLUB_MEMBER_FORM_NAMES.PHONE}
+          countryFieldName={SCLUB_MEMBER_FORM_NAMES.DIAL_CODE}
+          phoneFieldName={SCLUB_MEMBER_FORM_NAMES.PHOME_NUMBER}
           label={LABELS.PHONE}
           required
           hideCountryName
@@ -45,7 +45,7 @@ export const PersonalInformationForm = () => {
           }}
         />
         <CustomFormItem
-          name={SCLUB_MEMBER_KEYS.BIRTHDAY}
+          name={SCLUB_MEMBER_FORM_NAMES.BIRTHDAY}
           label={LABELS.BIRTHDAY}
           required
           rules={rules.birthDay}>
@@ -57,14 +57,14 @@ export const PersonalInformationForm = () => {
           />
         </CustomFormItem>
         <CustomFormItem
-          name={SCLUB_MEMBER_KEYS.ADDRESS}
+          name={SCLUB_MEMBER_FORM_NAMES.ADDRESS}
           label={LABELS.ADDRESS}
           required
           rules={rules.address}>
           <Input size='large' placeholder={PLACEHOLDERS.ADDRESS} />
         </CustomFormItem>
         <MemoizedUniversitySelectFormItem
-          name={SCLUB_MEMBER_KEYS.UNIVERSITY}
+          name={SCLUB_MEMBER_FORM_NAMES.UNIVERSITY}
           label={LABELS.UNIVERSITY}
           required
           rules={rules.university}
@@ -74,7 +74,7 @@ export const PersonalInformationForm = () => {
           }}
         />
         <CustomFormItem
-          name={SCLUB_MEMBER_KEYS.MAJOR}
+          name={SCLUB_MEMBER_FORM_NAMES.MAJOR}
           label={LABELS.MAJOR}
           required
           rules={rules.address}>

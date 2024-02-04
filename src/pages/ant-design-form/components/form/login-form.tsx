@@ -1,5 +1,9 @@
 import { Form } from 'antd'
-import { FORM_STEP_ITEMS, FORM_STEP_NUMBER } from '../../constant/form-steps'
+import { SClubInformationForm } from '.'
+import {
+  FORM_STEP_ITEMS,
+  FORM_STEP_NUMBER,
+} from '../../constant/form/form-steps'
 import { useLoginForm } from '../../hooks'
 import { TSClubMember } from '../../types'
 import { MemoizedFormFooter } from '../custom/form-footer'
@@ -37,6 +41,9 @@ export const LoginForm = () => {
         )}
         {currentStep === FORM_STEP_NUMBER.PERSONAL_INFORMATION && (
           <PersonalInformationForm />
+        )}
+        {currentStep === FORM_STEP_NUMBER.SCLUB_INFORMATION && (
+          <SClubInformationForm />
         )}
         <MemoizedFormFooter submitButtonTitle={submitButtonTitle} />
       </div>

@@ -8,6 +8,11 @@ export const PLACEHOLDERS = {
   ADDRESS: 'Enter your address',
   UNIVERSITY: 'Enter your university',
   MAJOR: 'Enter your major',
+  MEMBER_TYPE: 'Select your member type',
+  HOUSE: 'Select your house',
+  PARTICIPANT_TERM: 'Select your participant term',
+  TERM: 'Select your term',
+  ROLE: 'Select your role',
 }
 
 export const LABELS = {
@@ -20,6 +25,12 @@ export const LABELS = {
   ADDRESS: 'Address',
   UNIVERSITY: 'University',
   MAJOR: 'Major',
+  MEMBER_TYPE: 'Member type',
+  HOUSE: 'House',
+  PARTICIPANT_TERM: 'Participant term',
+  HAS_ROLE: 'Do you has a role in SClub?',
+  TERM: 'Term',
+  ROLE: 'Role',
 }
 
 export const VALIDATION_MESSAGES = {
@@ -50,5 +61,23 @@ export const VALIDATION_MESSAGES = {
   },
   MAJOR: {
     REQUIRED: 'Please input your major',
+  },
+  MEMBER_TYPE: {
+    REQUIRED: 'Please select your member type',
+  },
+  HOUSE: {
+    REQUIRED: 'Please select your house',
+  },
+  PARTICIPANT_TERM: {
+    REQUIRED: 'Please select your participant term',
+  },
+  TERM: {
+    REQUIRED: 'Please select your term',
+  },
+  ROLE: {
+    REQUIRED: 'Please select your role',
+  },
+  ROLES: {
+    REQUIRED: 'Please add at least one of your roles',
   },
 }

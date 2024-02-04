@@ -4,7 +4,7 @@ import { CustomFormItem } from '../..'
 import {
   LABELS,
   PLACEHOLDERS,
-  SCLUB_MEMBER_KEYS,
+  SCLUB_MEMBER_FORM_NAMES,
   VALIDATION_MESSAGES,
 } from '../../../constant'
 import {
@@ -29,7 +29,7 @@ export const AccountInformationForm = () => {
     confirmPassword: [
       requiredRule(VALIDATION_MESSAGES.CONFIRM_PASSWORD.REQUIRED),
       confirmPasswordValidation(
-        SCLUB_MEMBER_KEYS.PASSWORD,
+        SCLUB_MEMBER_FORM_NAMES.PASSWORD,
         VALIDATION_MESSAGES.CONFIRM_PASSWORD.NOT_MATCH
       ),
     ],
@@ -40,14 +40,14 @@ export const AccountInformationForm = () => {
       <Typography.Title level={2}>Account Information</Typography.Title>
       <div className='w-full max-w-[70%] px-20'>
         <CustomFormItem
-          name={SCLUB_MEMBER_KEYS.EMAIL}
+          name={SCLUB_MEMBER_FORM_NAMES.EMAIL}
           label={LABELS.EMAIL}
           rules={rules.email}
           required>
           <Input placeholder={PLACEHOLDERS.EMAIL} size='large' />
         </CustomFormItem>
         <CustomFormItem
-          name={SCLUB_MEMBER_KEYS.PASSWORD}
+          name={SCLUB_MEMBER_FORM_NAMES.PASSWORD}
           rules={rules.password}
           label={LABELS.PASSWORD}
           required>
@@ -58,10 +58,10 @@ export const AccountInformationForm = () => {
           />
         </CustomFormItem>
         <CustomFormItem
-          name={SCLUB_MEMBER_KEYS.CONFIRM_PASSWORD}
+          name={SCLUB_MEMBER_FORM_NAMES.CONFIRM_PASSWORD}
           rules={rules.confirmPassword}
           label={LABELS.CONFIRM_PASSWORD}
-          dependencies={[SCLUB_MEMBER_KEYS.PASSWORD]}
+          dependencies={[SCLUB_MEMBER_FORM_NAMES.PASSWORD]}
           required>
           <Input.Password
             placeholder={PLACEHOLDERS.CONFIRM_PASSWORD}
