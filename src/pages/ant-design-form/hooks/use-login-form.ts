@@ -35,8 +35,6 @@ export const useLoginForm = () => {
       : ANTD_STEP_DIRECTION.VERTICAL
   }, [windowWidth])
 
-  console.log(windowWidth, stepDirection)
-
   const submitButtonTitle =
     currentStep === FORM_STEP_NUMBER.SCLUB_INFORMATION
       ? COMPLETE_TITLE

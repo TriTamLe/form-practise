@@ -7,7 +7,7 @@ export type TFormFooter = {
 }
 
 const viewData = (form: FormInstance) => {
-  console.log(form.getFieldsValue(true))
+  console.log(form.getFieldsValue())
 }
 
 const FormFooter = ({ submitButtonTitle = 'Complete' }: TFormFooter) => {

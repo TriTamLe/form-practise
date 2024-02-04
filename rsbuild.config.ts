@@ -2,8 +2,6 @@ import { defineConfig } from '@rsbuild/core'
 import { pluginReact } from '@rsbuild/plugin-react'
 import path from 'path'
 
-console.log(process.env.PUBLIC_HIPPO_UNIVERSITY_API)
-
 export default defineConfig({
   html: {
     title: 'Form Practise',

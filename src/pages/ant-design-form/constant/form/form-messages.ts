@@ -31,6 +31,7 @@ export const LABELS = {
   HAS_ROLE: 'Do you has a role in SClub?',
   TERM: 'Term',
   ROLE: 'Role',
+  ROLES: 'Your roles',
 }
 
 export const VALIDATION_MESSAGES = {

@@ -7,7 +7,7 @@ export const getTermOptions = (): OptionType[] => {
 
   const options: OptionType[] = []
 
-  for (let i = FIRST_YEAR; i <= currentYear; i++) {
+  for (let i = currentYear; i > FIRST_YEAR; i--) {
     const fromYear = i
     const toYear = i + 1
 
