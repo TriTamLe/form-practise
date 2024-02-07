@@ -1,5 +1,5 @@
+import { AntdProvider, ReactQueryProvider } from '@lib'
 import { LoginForm } from '@pages'
-import { AntdProvider, ReactQueryProvider } from '@provider'
 import { Flex, Typography } from 'antd'
 import './App.css'
 
