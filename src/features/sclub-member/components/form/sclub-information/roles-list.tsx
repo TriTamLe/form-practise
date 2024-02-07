@@ -1,13 +1,13 @@
 import { CloseOutlined } from '@ant-design/icons'
 import {
-  CustomFormItem,
   LABELS,
   PLACEHOLDERS,
   SCLUB_MEMBER_FORM_NAMES,
   SCLUB_ROLES_OPTIONS,
-  getTermOptions,
-} from '@pages'
+} from '@features/sclub-member/constant'
+import { getTermOptions } from '@features/sclub-member/handlers'
 import { Button, Form, Select, Space } from 'antd'
+import { CustomFormItem } from '../..'
 
 export const RoleLists = () => {
   return (
@@ -35,6 +35,9 @@ export const RoleLists = () => {
                     options={SCLUB_ROLES_OPTIONS}
                     placeholder={PLACEHOLDERS.ROLE}
                     size='large'
+                    dropdownStyle={{
+                      width: '250px',
+                    }}
                   />
                 </CustomFormItem>
                 <CloseOutlined onClick={() => remove(name)} />

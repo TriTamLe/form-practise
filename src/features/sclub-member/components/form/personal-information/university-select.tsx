@@ -1,4 +1,4 @@
-import { useGetUniversities } from '@pages/ant-design-form/api'
+import { useGetUniversities } from '@features/sclub-member/services'
 import { AutoComplete, AutoCompleteProps, FormItemProps } from 'antd'
 import useFormInstance from 'antd/es/form/hooks/useFormInstance'
 import { memo } from 'react'

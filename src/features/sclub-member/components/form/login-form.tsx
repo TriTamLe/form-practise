@@ -35,7 +35,7 @@ export const LoginForm = () => {
         onChangeStep={onChangeStep}
         direction={stepDirection}
       />
-      <div className='w-full h-full relative'>
+      <div className='w-full h-full'>
         {currentStep === FORM_STEP_NUMBER.ACCOUNT_INFORMATION && (
           <AccountInformationForm />
         )}

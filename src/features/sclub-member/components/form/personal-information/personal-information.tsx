@@ -1,12 +1,13 @@
-import { PhoneInputField } from '@components'
+import { PhoneInputField } from '@components/phone-input/components'
+
 import {
   DATE_FORMAT,
   LABELS,
   PLACEHOLDERS,
   SCLUB_MEMBER_FORM_NAMES,
   VALIDATION_MESSAGES,
-  requiredRule,
-} from '@pages'
+} from '@features/sclub-member/constant'
+import { requiredRule } from '@features/sclub-member/handlers'
 import { DatePicker, Flex, Input, Typography } from 'antd'
 import { Rule } from 'antd/es/form'
 import { CustomFormItem } from '../..'

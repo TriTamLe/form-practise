@@ -13,7 +13,7 @@ const viewData = (form: FormInstance) => {
 const FormFooter = ({ submitButtonTitle = 'Complete' }: TFormFooter) => {
   const form = useFormInstance()
   return (
-    <div className='absolute bottom-[2%] w-full rounded-md shadow-md p-5 flex flex-row items-center justify-end gap-3 border-primary border-[0.5px] border-solid'>
+    <div className='w-full rounded-md shadow-md p-5 flex flex-row items-center justify-end gap-3 border-primary border-[0.5px] border-solid'>
       <Button size='large' htmlType='button' onClick={() => viewData(form)}>
         Cancel
       </Button>

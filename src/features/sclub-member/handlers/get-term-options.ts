@@ -1,4 +1,4 @@
-import { OptionType } from '../..'
+import { OptionType } from '../types'
 
 const FIRST_YEAR = 2009
 

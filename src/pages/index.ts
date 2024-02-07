@@ -1,1 +1,1 @@
-export * from './ant-design-form'
+export * from './sclub-member-form'

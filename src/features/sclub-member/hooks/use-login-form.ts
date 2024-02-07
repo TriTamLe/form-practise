@@ -2,13 +2,14 @@ import { ANTD_FORM_LAYOUT, ANTD_STEP_DIRECTION, WINDOW_WIDTH } from '@constant'
 import { useForm } from 'antd/es/form/Form'
 import { useCallback, useMemo, useState } from 'react'
 import { useWindowSize } from 'react-use'
+
 import {
   COMPLETE_TITLE,
   DEFAULT_STEP,
   DEFAULT_WHITELIST,
   FORM_STEP_NUMBER,
   NEXT_TITLE,
-} from '..'
+} from '../constant'
 import { handleOnFinish } from '../handlers'
 
 export const useLoginForm = () => {

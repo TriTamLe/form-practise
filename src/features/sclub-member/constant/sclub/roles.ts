@@ -2,6 +2,7 @@ import { OptionType } from '../../types'
 
 export const SCLUB_ROLES = {
   PRESIDENT: 'president',
+  VICE_PRESEDENT: 'vicePresident',
   HOUSE_LEADER: 'houseLeader',
   CLUB_CARING_LEADER: 'clubCaringLeader',
   CLUB_CARING_MEMBER: 'clubCaringMember',
@@ -18,6 +19,10 @@ export const SCLUB_ROLES_OPTIONS: OptionType[] = [
   {
     label: 'President',
     value: SCLUB_ROLES.PRESIDENT,
+  },
+  {
+    label: 'Vice President',
+    value: SCLUB_ROLES.VICE_PRESEDENT,
   },
   {
     label: 'House Leader',

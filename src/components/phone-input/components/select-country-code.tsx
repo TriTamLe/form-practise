@@ -1,6 +1,6 @@
 import { Form, Select } from 'antd'
 import { FlagImage, defaultCountries } from 'react-international-phone'
-import { DIAL_CODE_PREFIX } from '..'
+import { DIAL_CODE_PREFIX } from '../constants'
 import { TCountryCodeSelector, TCountryIso2 } from '../types'
 
 export const CountryCodeSelector = ({

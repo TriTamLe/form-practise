@@ -1,6 +1,6 @@
-import { QUERY_KEYS } from '@pages'
 import { useQuery } from '@tanstack/react-query'
 import Axios, { InternalAxiosRequestConfig } from 'axios'
+import { QUERY_KEYS } from '../constant'
 
 const axios = Axios.create({
   baseURL: 'http://universities.hipolabs.com',

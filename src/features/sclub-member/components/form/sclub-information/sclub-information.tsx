@@ -4,8 +4,8 @@ import {
   MEMBER_TYPE_OPTIONS,
   PLACEHOLDERS,
   SCLUB_MEMBER_FORM_NAMES,
-  getTermOptions,
-} from '@pages'
+} from '@features/sclub-member/constant'
+import { getTermOptions } from '@features/sclub-member/handlers'
 import { Flex, Radio, Select, Switch, Typography } from 'antd'
 import { useWatch } from 'antd/es/form/Form'
 import useFormInstance from 'antd/es/form/hooks/useFormInstance'
