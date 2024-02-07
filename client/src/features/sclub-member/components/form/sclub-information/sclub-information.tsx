@@ -4,16 +4,21 @@ import {
   MEMBER_TYPE_OPTIONS,
   PLACEHOLDERS,
   SCLUB_MEMBER_FORM_NAMES,
+  VALIDATION_MESSAGES,
 } from '@features/sclub-member/constant'
-import { getTermOptions } from '@features/sclub-member/handlers'
-import { Flex, Radio, Select, Switch, Typography } from 'antd'
-import { useWatch } from 'antd/es/form/Form'
-import useFormInstance from 'antd/es/form/hooks/useFormInstance'
+import { getTermOptions, requiredRule } from '@features/sclub-member/handlers'
+import { Flex, Radio, Select, Typography } from 'antd'
+import { Rule } from 'antd/es/form'
 import { CustomFormItem, RoleLists } from '../..'
 
 export const SClubInformationForm = () => {
-  const form = useFormInstance()
-  const hasRole = useWatch(SCLUB_MEMBER_FORM_NAMES.HASROLE, form)
+  const rules: Record<string, Rule[]> = {
+    memberType: [requiredRule(VALIDATION_MESSAGES.MEMBER_TYPE.REQUIRED)],
+    house: [requiredRule(VALIDATION_MESSAGES.HOUSE.REQUIRED)],
+    participantTerm: [
+      requiredRule(VALIDATION_MESSAGES.PARTICIPANT_TERM.REQUIRED),
+    ],
+  }
 
   return (
     <Flex vertical align='center' gap={20}>
@@ -22,7 +27,8 @@ export const SClubInformationForm = () => {
         <CustomFormItem
           name={SCLUB_MEMBER_FORM_NAMES.MEMBER_TYPE}
           label={LABELS.MEMBER_TYPE}
-          required>
+          required
+          rules={rules.memberType}>
           <Select
             options={MEMBER_TYPE_OPTIONS}
             size='large'
@@ -32,6 +38,7 @@ export const SClubInformationForm = () => {
         <CustomFormItem
           name={SCLUB_MEMBER_FORM_NAMES.HOUSE}
           label={LABELS.HOUSE}
+          rules={rules.house}
           required>
           <Radio.Group
             options={HOUSES_OPTION}
@@ -43,6 +50,7 @@ export const SClubInformationForm = () => {
         <CustomFormItem
           name={SCLUB_MEMBER_FORM_NAMES.PARTICIPANT_TERM}
           label={LABELS.PARTICIPANT_TERM}
+          rules={rules.participantTerm}
           required>
           <Select
             options={getTermOptions()}
@@ -51,12 +59,7 @@ export const SClubInformationForm = () => {
             placeholder={PLACEHOLDERS.PARTICIPANT_TERM}
           />
         </CustomFormItem>
-        <CustomFormItem
-          name={SCLUB_MEMBER_FORM_NAMES.HASROLE}
-          label={LABELS.HAS_ROLE}>
-          <Switch checkedChildren={'YES'} unCheckedChildren={'NO'} />
-        </CustomFormItem>
-        {hasRole && <RoleLists />}
+        <RoleLists />
       </div>
     </Flex>
   )

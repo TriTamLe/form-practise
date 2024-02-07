@@ -15,7 +15,13 @@ export const transformSClubMember = (data: TSClubMember): TSClubMemberDTO => {
         }
       })
     : undefined
-  const { phone: _phone, roles: _roles, birthday: _birthday, ...rest } = data
+  const {
+    phone: _phone,
+    roles: _roles,
+    birthday: _birthday,
+    confirmPassword: _confirmPassword,
+    ...rest
+  } = data
 
   return {
     ...rest,
