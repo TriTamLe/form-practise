@@ -1,3 +1,6 @@
+import { TPasswordValidationCheckItem } from '@features/sclub-member/types'
+import { PASSWORD_REGEX } from '.'
+
 export const PLACEHOLDERS = {
   EMAIL: 'Enter your email address',
   PASSWORD: 'Enter your password',
@@ -42,6 +45,11 @@ export const VALIDATION_MESSAGES = {
   PASSWORD: {
     REQUIRED: 'Please input your password',
     INVALID: 'Please input a valid password',
+    LENGTH: 'Between 8 and 20 characters',
+    AT_LEAST_ONE_NUMBER: 'At least one number',
+    AT_LEAST_ONE_SPECIAL_CHARACTER: 'At least one special character',
+    BOTH_UPPER_CASE_AND_LOWER_CASE: 'Both upper and lower case characters',
+    DO_NOT_CONTAIN_SPACES: 'Do not contain spaces',
   },
   CONFIRM_PASSWORD: {
     REQUIRED: 'Please confirm your password',
@@ -82,3 +90,23 @@ export const VALIDATION_MESSAGES = {
     REQUIRED: 'Please add at least one of your roles',
   },
 }
+
+export const PASSWORD_VALIDATION_CHECK: TPasswordValidationCheckItem[] = [
+  [
+    PASSWORD_REGEX.BOTH_UPPER_CASE_AND_LOWER_CASE,
+    VALIDATION_MESSAGES.PASSWORD.BOTH_UPPER_CASE_AND_LOWER_CASE,
+  ],
+  [PASSWORD_REGEX.PASSWORD_LENGTH, VALIDATION_MESSAGES.PASSWORD.LENGTH],
+  [
+    PASSWORD_REGEX.AT_LEAST_ONE_NUMBER,
+    VALIDATION_MESSAGES.PASSWORD.AT_LEAST_ONE_NUMBER,
+  ],
+  [
+    PASSWORD_REGEX.AT_LEAST_ONE_SPECIAL_CHARACTER,
+    VALIDATION_MESSAGES.PASSWORD.AT_LEAST_ONE_SPECIAL_CHARACTER,
+  ],
+  [
+    PASSWORD_REGEX.DO_NOT_CONTAIN_SPACES,
+    VALIDATION_MESSAGES.PASSWORD.DO_NOT_CONTAIN_SPACES,
+  ],
+]

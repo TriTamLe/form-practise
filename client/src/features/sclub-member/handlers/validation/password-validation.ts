@@ -1,11 +1,11 @@
 import { Rule, RuleObject } from 'antd/es/form'
 import { StoreValue } from 'antd/es/form/interface'
-import { passwordPattern } from '../../constant/form/regex-pattern'
+import { PASSWORD_REGEX } from '.'
 import { formatCheck } from './format-check'
 
 export const passwordFormat =
   (msg: string) => (_: RuleObject, value: StoreValue) =>
-    formatCheck(passwordPattern)(msg)(_, value)
+    formatCheck(PASSWORD_REGEX.ALL_RULES)(msg)(_, value)
 
 export const confirmPasswordValidation =
   (passwordFieldName: string, message: string): Rule =>

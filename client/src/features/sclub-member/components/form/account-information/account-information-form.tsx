@@ -7,31 +7,14 @@ import {
   SCLUB_MEMBER_FORM_NAMES,
   VALIDATION_MESSAGES,
 } from '../../../constant'
-import {
-  confirmPasswordValidation,
-  passwordFormat,
-  requiredRule,
-} from '../../../handlers'
+import { requiredRule } from '../../../handlers'
+import { PasswordFormItem } from './password-form-items'
 
 export const AccountInformationForm = () => {
   const rules: Record<string, Rule[]> = {
     email: [
       requiredRule(VALIDATION_MESSAGES.EMAIL.REQUIRED),
       { type: 'email', message: VALIDATION_MESSAGES.EMAIL.INVALID },
-    ],
-    password: [
-      requiredRule(VALIDATION_MESSAGES.PASSWORD.REQUIRED),
-      {
-        validator: passwordFormat(VALIDATION_MESSAGES.PASSWORD.INVALID),
-      },
-    ],
-
-    confirmPassword: [
-      requiredRule(VALIDATION_MESSAGES.CONFIRM_PASSWORD.REQUIRED),
-      confirmPasswordValidation(
-        SCLUB_MEMBER_FORM_NAMES.PASSWORD,
-        VALIDATION_MESSAGES.CONFIRM_PASSWORD.NOT_MATCH
-      ),
     ],
   }
 
@@ -46,29 +29,7 @@ export const AccountInformationForm = () => {
           required>
           <Input placeholder={PLACEHOLDERS.EMAIL} size='large' />
         </CustomFormItem>
-        <CustomFormItem
-          name={SCLUB_MEMBER_FORM_NAMES.PASSWORD}
-          rules={rules.password}
-          label={LABELS.PASSWORD}
-          required>
-          <Input.Password
-            placeholder={PLACEHOLDERS.PASSWORD}
-            size='large'
-            visibilityToggle
-          />
-        </CustomFormItem>
-        <CustomFormItem
-          name={SCLUB_MEMBER_FORM_NAMES.CONFIRM_PASSWORD}
-          rules={rules.confirmPassword}
-          label={LABELS.CONFIRM_PASSWORD}
-          dependencies={[SCLUB_MEMBER_FORM_NAMES.PASSWORD]}
-          required>
-          <Input.Password
-            placeholder={PLACEHOLDERS.CONFIRM_PASSWORD}
-            size='large'
-            visibilityToggle
-          />
-        </CustomFormItem>
+        <PasswordFormItem />
       </div>
     </Flex>
   )
