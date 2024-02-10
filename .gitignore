@@ -4,9 +4,8 @@
 *.log*
 
 # Dist
-client/node_modules
-client/dist/
-server/node_modules
+node_modules
+dist
 
 # IDE
 .vscode/*
