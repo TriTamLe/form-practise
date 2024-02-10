@@ -1,3 +1,4 @@
+import colorsConfig from '@/data/color'
 import { PASSWORD_VALIDATION_CHECK } from '@/features/sclub-member/constant'
 
 type TPasswordHintExtra = {
@@ -9,7 +10,7 @@ const ruleItem = (condition: boolean, message: string, key: number) => {
     <li
       key={key}
       style={{
-        color: condition ? 'green' : 'red',
+        color: condition ? colorsConfig.success : colorsConfig.error,
       }}>
       {message}
     </li>
