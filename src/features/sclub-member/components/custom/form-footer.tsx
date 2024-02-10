@@ -1,4 +1,4 @@
-import { Button, FormInstance } from 'antd'
+import { Button, FloatButton, FormInstance } from 'antd'
 import useFormInstance from 'antd/es/form/hooks/useFormInstance'
 import { memo } from 'react'
 
@@ -13,14 +13,14 @@ const viewData = (form: FormInstance) => {
 const FormFooter = ({ submitButtonTitle = 'Complete' }: TFormFooter) => {
   const form = useFormInstance()
   return (
-    <div className='w-full rounded-md shadow-md p-5 flex flex-row items-center justify-end gap-3 border-primary border-[0.5px] border-solid'>
+    <FloatButton.Group className='rounded-md shadow-md flex flex-row items-center justify-end gap-3 mb-5'>
       <Button size='large' htmlType='button' onClick={() => viewData(form)}>
         Cancel
       </Button>
       <Button size='large' htmlType='submit' type='primary'>
         {submitButtonTitle}
       </Button>
-    </div>
+    </FloatButton.Group>
   )
 }
 

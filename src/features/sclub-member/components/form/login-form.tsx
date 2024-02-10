@@ -37,7 +37,7 @@ export const LoginForm = () => {
         onChangeStep={onChangeStep}
         direction={stepDirection}
       />
-      <div className='w-full h-full'>
+      <div className='w-full h-screen'>
         {currentStep === FORM_STEP_NUMBER.ACCOUNT_INFORMATION && (
           <AccountInformationForm />
         )}
@@ -47,6 +47,7 @@ export const LoginForm = () => {
         {currentStep === FORM_STEP_NUMBER.SCLUB_INFORMATION && (
           <SClubInformationForm />
         )}
+
         <MemoizedFormFooter submitButtonTitle={submitButtonTitle} />
       </div>
     </Form>

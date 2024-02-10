@@ -1,16 +1,6 @@
 import { QUERY_KEYS } from '@/features/sclub-member/constant'
+import { UniversitiesAxios } from '@/lib'
 import { useQuery } from '@tanstack/react-query'
-import Axios, { InternalAxiosRequestConfig } from 'axios'
-
-const axios = Axios.create({
-  baseURL: 'http://universities.hipolabs.com',
-})
-
-axios.interceptors.request.use((config: InternalAxiosRequestConfig) => {
-  config.headers.set('Accept', 'application/json')
-
-  return config
-})
 
 type TUniversityResponse = {
   name: string
@@ -36,7 +26,7 @@ export const getUniversitiesFn = async ({
   queryKey: [string, { keyword: string }]
 }): Promise<TUniversityResponse[]> => {
   const [_key, { keyword }] = queryKey
-  const response = await axios.get('/search', {
+  const response = await UniversitiesAxios.get('/search', {
     params: {
       name: keyword,
       country: 'Viet Nam',
