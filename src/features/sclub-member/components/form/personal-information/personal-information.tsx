@@ -1,16 +1,16 @@
-import { PhoneInputField } from '@components/phone-input/components'
+import { PhoneInputField } from '@/components/phone-input/components'
 import {
   CustomFormItem,
   MemoizedUniversitySelectFormItem,
-} from '@features/sclub-member/components'
+} from '@/features/sclub-member/components'
 import {
   DATE_FORMAT,
   LABELS,
   PLACEHOLDERS,
   SCLUB_MEMBER_FORM_NAMES,
   VALIDATION_MESSAGES,
-} from '@features/sclub-member/constant'
-import { requiredRule } from '@features/sclub-member/handlers'
+} from '@/features/sclub-member/constant'
+import { requiredRule } from '@/features/sclub-member/handlers'
 import { DatePicker, Flex, Input, Typography } from 'antd'
 import { Rule } from 'antd/es/form'
 

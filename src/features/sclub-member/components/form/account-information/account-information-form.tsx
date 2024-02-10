@@ -1,14 +1,14 @@
 import {
   CustomFormItem,
   PasswordFormItem,
-} from '@features/sclub-member/components'
+} from '@/features/sclub-member/components'
 import {
   LABELS,
   PLACEHOLDERS,
   SCLUB_MEMBER_FORM_NAMES,
   VALIDATION_MESSAGES,
-} from '@features/sclub-member/constant'
-import { requiredRule } from '@features/sclub-member/handlers'
+} from '@/features/sclub-member/constant'
+import { requiredRule } from '@/features/sclub-member/handlers'
 import { Flex, Input, Typography } from 'antd'
 import { Rule } from 'antd/es/form'
 

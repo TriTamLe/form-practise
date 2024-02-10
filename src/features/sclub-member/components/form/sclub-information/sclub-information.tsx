@@ -1,4 +1,4 @@
-import { CustomFormItem, RoleLists } from '@features/sclub-member/components'
+import { CustomFormItem, RoleLists } from '@/features/sclub-member/components'
 import {
   HOUSES_OPTION,
   LABELS,
@@ -6,8 +6,8 @@ import {
   PLACEHOLDERS,
   SCLUB_MEMBER_FORM_NAMES,
   VALIDATION_MESSAGES,
-} from '@features/sclub-member/constant'
-import { getTermOptions, requiredRule } from '@features/sclub-member/handlers'
+} from '@/features/sclub-member/constant'
+import { getTermOptions, requiredRule } from '@/features/sclub-member/handlers'
 import { Flex, Radio, Select, Typography } from 'antd'
 import { Rule } from 'antd/es/form'
 

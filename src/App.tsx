@@ -1,5 +1,5 @@
-import { AntdProvider, ReactQueryProvider } from '@lib'
-import { SClubMemberForm } from '@pages'
+import { AntdProvider, ReactQueryProvider } from '@/lib'
+import { SClubMemberForm } from '@/pages'
 import './App.css'
 
 function App() {

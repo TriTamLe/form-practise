@@ -1,4 +1,4 @@
-import { OptionType } from '@features/sclub-member/types'
+import { OptionType } from '@/features/sclub-member/types'
 
 export const MEMBER_TYPE = {
   OLD_MEMEBER: 'oldMember',

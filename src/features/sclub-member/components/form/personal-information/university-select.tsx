@@ -1,5 +1,5 @@
-import { CustomFormItem } from '@features/sclub-member/components'
-import { useGetUniversities } from '@features/sclub-member/services'
+import { CustomFormItem } from '@/features/sclub-member/components'
+import { useGetUniversities } from '@/features/sclub-member/services'
 import { AutoComplete, AutoCompleteProps, FormItemProps } from 'antd'
 import useFormInstance from 'antd/es/form/hooks/useFormInstance'
 import { memo } from 'react'

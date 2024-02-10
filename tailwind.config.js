@@ -2,7 +2,7 @@
 
 import colorsConfig from './src/data/color'
 
-module.exports = {
+export default {
   content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
     extend: {

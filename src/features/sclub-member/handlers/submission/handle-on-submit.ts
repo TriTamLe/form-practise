@@ -1,6 +1,6 @@
-import { FORM_STEP_NUMBER } from '@features/sclub-member/constant'
-import { transformSClubMember } from '@features/sclub-member/handlers'
-import { TSClubMember } from '@features/sclub-member/types'
+import { FORM_STEP_NUMBER } from '@/features/sclub-member/constant'
+import { transformSClubMember } from '@/features/sclub-member/handlers'
+import { TSClubMember } from '@/features/sclub-member/types'
 import { FormInstance } from 'antd'
 
 export const handleOnSubmit = (form: FormInstance<TSClubMember>) => {

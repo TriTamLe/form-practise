@@ -1,7 +1,8 @@
 import { InputProps, SelectProps } from 'antd'
 import { FormItemProps, Rule, RuleObject } from 'antd/es/form'
 import { NamePath, StoreValue } from 'antd/es/form/interface'
-import type { CountryIso2, ParsedCountry } from 'react-international-phone'
+import { ParsedCountry } from 'node_modules/react-international-phone/dist/types'
+import type { CountryIso2 } from 'react-international-phone'
 
 export type TCountryIso2 = CountryIso2
 export type TParsedCountry = ParsedCountry

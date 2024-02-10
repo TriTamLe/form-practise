@@ -1,5 +1,5 @@
-import { SCLUB_MEMBER_FORM_NAMES } from '@features/sclub-member/constant'
-import { THouse, TMemeberType, TRoles } from '@features/sclub-member/types'
+import { SCLUB_MEMBER_FORM_NAMES } from '@/features/sclub-member/constant'
+import { THouse, TMemeberType, TRoles } from '@/features/sclub-member/types'
 import { Dayjs } from 'dayjs'
 import { CountryIso2 } from 'react-international-phone'
 

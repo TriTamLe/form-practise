@@ -1,4 +1,4 @@
-import { PASSWORD_VALIDATION_CHECK } from '@features/sclub-member/constant'
+import { PASSWORD_VALIDATION_CHECK } from '@/features/sclub-member/constant'
 
 type TPasswordHintExtra = {
   password: string

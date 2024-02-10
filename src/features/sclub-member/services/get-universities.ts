@@ -1,4 +1,4 @@
-import { QUERY_KEYS } from '@features/sclub-member/constant'
+import { QUERY_KEYS } from '@/features/sclub-member/constant'
 import { useQuery } from '@tanstack/react-query'
 import Axios, { InternalAxiosRequestConfig } from 'axios'
 

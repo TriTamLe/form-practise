@@ -1,14 +1,14 @@
-import { CloseOutlined } from '@ant-design/icons'
-import { CustomFormItem } from '@features/sclub-member/components'
+import { CustomFormItem } from '@/features/sclub-member/components'
 import {
   LABELS,
   PLACEHOLDERS,
   SCLUB_MEMBER_FORM_NAMES,
   SCLUB_ROLES_OPTIONS,
   VALIDATION_MESSAGES,
-} from '@features/sclub-member/constant'
-import { getTermOptions, requiredRule } from '@features/sclub-member/handlers'
-import { TFormListRules } from '@features/sclub-member/types'
+} from '@/features/sclub-member/constant'
+import { getTermOptions, requiredRule } from '@/features/sclub-member/handlers'
+import { TFormListRules } from '@/features/sclub-member/types'
+import { CloseOutlined } from '@ant-design/icons'
 import { Button, Form, Select, Space, Switch } from 'antd'
 import { Rule } from 'antd/es/form'
 import { useWatch } from 'antd/es/form/Form'

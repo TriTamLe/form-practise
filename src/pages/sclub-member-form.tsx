@@ -1,4 +1,4 @@
-import { LoginForm } from '@features/sclub-member'
+import { LoginForm } from '@/features/sclub-member'
 import { Flex, Typography } from 'antd'
 
 export const SClubMemberForm = () => {

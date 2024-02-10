@@ -1,4 +1,4 @@
-import { OptionType } from '@features/sclub-member/types'
+import { OptionType } from '@/features/sclub-member/types'
 
 const FIRST_YEAR = 2009
 

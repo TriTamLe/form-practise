@@ -1,37 +1,44 @@
 {
   "name": "sclub-member-form",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "rsbuild dev --open",
-    "build": "rsbuild build",
-    "preview": "rsbuild preview"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@ant-design/icons": "^5.3.0",
-    "@tanstack/react-query": "^5.17.19",
-    "@tanstack/react-query-devtools": "^5.17.21",
-    "antd": "^5.13.3",
-    "axios": "^1.6.5",
+    "@tanstack/react-query": "^5.18.1",
+    "antd": "^5.14.0",
+    "axios": "^1.6.7",
     "dayjs": "^1.11.10",
     "google-libphonenumber": "^3.2.34",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-international-phone": "^4.2.0",
+    "react-international-phone": "^4.2.4",
     "react-use": "^17.5.0"
   },
   "devDependencies": {
-    "@rsbuild/core": "^0.3.6",
-    "@rsbuild/plugin-react": "^0.3.6",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@tanstack/react-query-devtools": "^5.18.1",
     "@types/google-libphonenumber": "^7.4.30",
-    "@types/node": "^20.11.5",
-    "@types/react": "^18.2.47",
-    "@types/react-dom": "^18.2.18",
+    "@types/node": "^20.11.17",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.17",
-    "node": "^21.6.0",
-    "react-devtools": "^5.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.35",
     "sass": "^1.70.0",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.0"
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0"
   }
 }

@@ -1,6 +1,6 @@
-import { transformToE164format } from '@components/phone-input/handlers'
-import { DATE_FORMAT } from '@constant'
-import { TSClubMember, TSClubMemberDTO } from '@features/sclub-member/types'
+import { transformToE164format } from '@/components/phone-input/handlers'
+import { DATE_FORMAT } from '@/constant'
+import { TSClubMember, TSClubMemberDTO } from '@/features/sclub-member/types'
 
 export const transformSClubMember = (data: TSClubMember): TSClubMemberDTO => {
   const phoneNumber = transformToE164format(

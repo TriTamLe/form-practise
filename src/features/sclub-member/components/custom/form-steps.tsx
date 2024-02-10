@@ -1,4 +1,4 @@
-import { TStepInformation } from '@features/sclub-member/types'
+import { TStepInformation } from '@/features/sclub-member/types'
 import { Steps, StepsProps } from 'antd'
 import { memo, useEffect, useState } from 'react'
 

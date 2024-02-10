@@ -1,4 +1,4 @@
-import { ANTD_FORM_LAYOUT, ANTD_STEP_DIRECTION, WINDOW_WIDTH } from '@constant'
+import { ANTD_FORM_LAYOUT, ANTD_STEP_DIRECTION, WINDOW_WIDTH } from '@/constant'
 import { useForm } from 'antd/es/form/Form'
 import { useCallback, useMemo, useState } from 'react'
 import { useWindowSize } from 'react-use'

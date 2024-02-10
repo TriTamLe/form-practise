@@ -4,13 +4,13 @@ import {
   MemoizedFormSteps,
   PersonalInformationForm,
   SClubInformationForm,
-} from '@features/sclub-member/components'
+} from '@/features/sclub-member/components'
 import {
   FORM_STEP_ITEMS,
   FORM_STEP_NUMBER,
-} from '@features/sclub-member/constant'
-import { useLoginForm } from '@features/sclub-member/hooks'
-import { TSClubMember } from '@features/sclub-member/types'
+} from '@/features/sclub-member/constant'
+import { useLoginForm } from '@/features/sclub-member/hooks'
+import { TSClubMember } from '@/features/sclub-member/types'
 import { Form } from 'antd'
 
 export const LoginForm = () => {

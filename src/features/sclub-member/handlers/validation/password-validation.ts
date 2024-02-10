@@ -1,5 +1,5 @@
-import { PASSWORD_REGEX } from '@features/sclub-member/constant'
-import { formatCheck } from '@features/sclub-member/handlers'
+import { PASSWORD_REGEX } from '@/features/sclub-member/constant'
+import { formatCheck } from '@/features/sclub-member/handlers'
 import { Rule, RuleObject } from 'antd/es/form'
 import { StoreValue } from 'antd/es/form/interface'
 

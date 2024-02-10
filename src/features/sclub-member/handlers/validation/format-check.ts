@@ -1,4 +1,4 @@
-import { hasValue } from '@features/sclub-member/handlers'
+import { hasValue } from '@/features/sclub-member/handlers'
 import { RuleObject } from 'antd/es/form'
 import { StoreValue } from 'antd/es/form/interface'
 

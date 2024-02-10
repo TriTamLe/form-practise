@@ -1,18 +1,18 @@
 import {
   CustomFormItem,
   PasswordHintExtra,
-} from '@features/sclub-member/components'
+} from '@/features/sclub-member/components'
 import {
   LABELS,
   PLACEHOLDERS,
   SCLUB_MEMBER_FORM_NAMES,
   VALIDATION_MESSAGES,
-} from '@features/sclub-member/constant'
+} from '@/features/sclub-member/constant'
 import {
   confirmPasswordValidation,
   passwordFormat,
   requiredRule,
-} from '@features/sclub-member/handlers'
+} from '@/features/sclub-member/handlers'
 import { Input, Tooltip } from 'antd'
 import { Rule } from 'antd/es/form'
 import { useWatch } from 'antd/es/form/Form'

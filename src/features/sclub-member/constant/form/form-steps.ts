@@ -1,4 +1,4 @@
-import { TStepInformation } from '@features/sclub-member/types'
+import { TStepInformation } from '@/features/sclub-member/types'
 
 export const FORM_STEP = {
   ACCOUNT_INFORMATION: 'Account Information',
