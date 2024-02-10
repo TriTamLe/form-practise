@@ -1,4 +1,7 @@
-import { SCLUB_MEMBER_FORM_NAMES, SCLUB_ROLES } from '../constant'
+import {
+  SCLUB_MEMBER_FORM_NAMES,
+  SCLUB_ROLES,
+} from '@features/sclub-member/constant'
 
 export type TRole = keyof typeof SCLUB_ROLES
 export type TRoles = {

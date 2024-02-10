@@ -1,7 +1,7 @@
+import { PASSWORD_REGEX } from '@features/sclub-member/constant'
+import { formatCheck } from '@features/sclub-member/handlers'
 import { Rule, RuleObject } from 'antd/es/form'
 import { StoreValue } from 'antd/es/form/interface'
-import { PASSWORD_REGEX } from '.'
-import { formatCheck } from './format-check'
 
 export const passwordFormat =
   (msg: string) => (_: RuleObject, value: StoreValue) =>

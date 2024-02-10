@@ -1,4 +1,8 @@
 import {
+  CustomFormItem,
+  PasswordHintExtra,
+} from '@features/sclub-member/components'
+import {
   LABELS,
   PLACEHOLDERS,
   SCLUB_MEMBER_FORM_NAMES,
@@ -13,8 +17,6 @@ import { Input, Tooltip } from 'antd'
 import { Rule } from 'antd/es/form'
 import { useWatch } from 'antd/es/form/Form'
 import useFormInstance from 'antd/es/form/hooks/useFormInstance'
-import { CustomFormItem } from '../..'
-import { PasswordHintExtra } from './password-hint-extra'
 
 export const PasswordFormItem = () => {
   const form = useFormInstance()

@@ -1,5 +1,8 @@
 import { PhoneInputField } from '@components/phone-input/components'
-
+import {
+  CustomFormItem,
+  MemoizedUniversitySelectFormItem,
+} from '@features/sclub-member/components'
 import {
   DATE_FORMAT,
   LABELS,
@@ -10,8 +13,6 @@ import {
 import { requiredRule } from '@features/sclub-member/handlers'
 import { DatePicker, Flex, Input, Typography } from 'antd'
 import { Rule } from 'antd/es/form'
-import { CustomFormItem } from '../..'
-import { MemoizedUniversitySelectFormItem } from './university-select'
 
 export const PersonalInformationForm = () => {
   const rules: Record<string, Rule[]> = {

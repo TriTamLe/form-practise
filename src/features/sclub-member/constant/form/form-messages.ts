@@ -1,4 +1,4 @@
-import { PASSWORD_REGEX } from '@features/sclub-member/constant/form/regex-pattern'
+import { PASSWORD_REGEX } from '@features/sclub-member/constant'
 import { TPasswordValidationCheckItem } from '@features/sclub-member/types'
 
 export const PLACEHOLDERS = {

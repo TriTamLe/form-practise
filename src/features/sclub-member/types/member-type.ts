@@ -1,3 +1,3 @@
-import { MEMBER_TYPE } from '../constant'
+import { MEMBER_TYPE } from '@features/sclub-member/constant'
 
 export type TMemeberType = keyof typeof MEMBER_TYPE

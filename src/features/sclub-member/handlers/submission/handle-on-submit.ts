@@ -1,7 +1,7 @@
 import { FORM_STEP_NUMBER } from '@features/sclub-member/constant'
+import { transformSClubMember } from '@features/sclub-member/handlers'
 import { TSClubMember } from '@features/sclub-member/types'
 import { FormInstance } from 'antd'
-import { transformSClubMember } from '.'
 
 export const handleOnSubmit = (form: FormInstance<TSClubMember>) => {
   const formData: TSClubMember = form.getFieldsValue(true)

@@ -1,4 +1,4 @@
-import { OptionType } from '../../types'
+import { OptionType } from '@features/sclub-member/types'
 
 export const SCLUB_ROLES = {
   PRESIDENT: 'president',

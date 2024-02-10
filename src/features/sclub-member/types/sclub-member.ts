@@ -1,9 +1,7 @@
+import { SCLUB_MEMBER_FORM_NAMES } from '@features/sclub-member/constant'
+import { THouse, TMemeberType, TRoles } from '@features/sclub-member/types'
 import { Dayjs } from 'dayjs'
 import { CountryIso2 } from 'react-international-phone'
-import { SCLUB_MEMBER_FORM_NAMES } from '../constant'
-import { THouse } from './house'
-import { TMemeberType } from './member-type'
-import { TRoles } from './roles'
 
 export type TSClubMember = {
   [SCLUB_MEMBER_FORM_NAMES.EMAIL]: string

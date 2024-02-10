@@ -1,4 +1,5 @@
 import { CloseOutlined } from '@ant-design/icons'
+import { CustomFormItem } from '@features/sclub-member/components'
 import {
   LABELS,
   PLACEHOLDERS,
@@ -12,7 +13,6 @@ import { Button, Form, Select, Space, Switch } from 'antd'
 import { Rule } from 'antd/es/form'
 import { useWatch } from 'antd/es/form/Form'
 import useFormInstance from 'antd/es/form/hooks/useFormInstance'
-import { CustomFormItem } from '../..'
 
 export const RoleLists = () => {
   const form = useFormInstance()

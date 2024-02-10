@@ -1,15 +1,17 @@
-import { Form } from 'antd'
-import { SClubInformationForm } from '.'
+import {
+  AccountInformationForm,
+  MemoizedFormFooter,
+  MemoizedFormSteps,
+  PersonalInformationForm,
+  SClubInformationForm,
+} from '@features/sclub-member/components'
 import {
   FORM_STEP_ITEMS,
   FORM_STEP_NUMBER,
-} from '../../constant/form/form-steps'
-import { useLoginForm } from '../../hooks'
-import { TSClubMember } from '../../types'
-import { MemoizedFormFooter } from '../custom/form-footer'
-import { MemoizedFormSteps } from '../custom/form-steps'
-import { AccountInformationForm } from './account-information'
-import { PersonalInformationForm } from './personal-information'
+} from '@features/sclub-member/constant'
+import { useLoginForm } from '@features/sclub-member/hooks'
+import { TSClubMember } from '@features/sclub-member/types'
+import { Form } from 'antd'
 
 export const LoginForm = () => {
   const {

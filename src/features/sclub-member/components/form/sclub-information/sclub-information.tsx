@@ -1,3 +1,4 @@
+import { CustomFormItem, RoleLists } from '@features/sclub-member/components'
 import {
   HOUSES_OPTION,
   LABELS,
@@ -9,7 +10,6 @@ import {
 import { getTermOptions, requiredRule } from '@features/sclub-member/handlers'
 import { Flex, Radio, Select, Typography } from 'antd'
 import { Rule } from 'antd/es/form'
-import { CustomFormItem, RoleLists } from '../..'
 
 export const SClubInformationForm = () => {
   const rules: Record<string, Rule[]> = {
