@@ -46,6 +46,7 @@ export const PasswordFormItem = () => {
         color='white'
         placement='top'
         arrow={false}>
+        <div>
         <CustomFormItem
           name={SCLUB_MEMBER_FORM_NAMES.PASSWORD}
           rules={rules.password}
@@ -58,6 +59,7 @@ export const PasswordFormItem = () => {
             visibilityToggle
           />
         </CustomFormItem>
+        </div>
       </Tooltip>
       <CustomFormItem
         name={SCLUB_MEMBER_FORM_NAMES.CONFIRM_PASSWORD}

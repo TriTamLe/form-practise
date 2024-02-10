@@ -1,4 +1,4 @@
-import colorsConfig from '@/data/color'
+import colorsConfig from '@/constant/color'
 import { PASSWORD_VALIDATION_CHECK } from '@/features/sclub-member/constant'
 
 type TPasswordHintExtra = {

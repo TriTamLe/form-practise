@@ -1,4 +1,4 @@
-import colorsConfig from '@/data/color'
+import colorsConfig from '@/constant/color'
 import { ThemeConfig } from 'antd'
 
 export const themeConfig: ThemeConfig = {
