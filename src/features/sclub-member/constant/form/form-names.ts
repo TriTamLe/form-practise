@@ -1,4 +1,7 @@
 export const SCLUB_MEMBER_FORM_NAMES = {
+  PROFILE_PICTURE: 'profilePicture',
+  FILE: 'file',
+  IMAGE_URL: 'imageURL',
   EMAIL: 'email',
   PASSWORD: 'password',
   CONFIRM_PASSWORD: 'confirmPassword',
