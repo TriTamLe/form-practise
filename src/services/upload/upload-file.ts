@@ -3,7 +3,9 @@ import {message} from 'antd'
 
 
 export const uploadFile = async (url: string, file: Blob) => {
-    const { error} = await supabase.storage.from(SUPABASE_BUCKET_NAME).upload(url, file)
+    const {error} = await supabase.storage.from(SUPABASE_BUCKET_NAME).upload(url, file, {
+        upsert: true,
+    })
 
     if (error) {
         message.error(error.message)

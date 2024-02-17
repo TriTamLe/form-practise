@@ -1,34 +1,31 @@
-import {FormItemProps} from 'antd'
-import useFormInstance from "antd/es/form/hooks/useFormInstance";
-import {getImageUrl} from "@/features/upload-image/handlers";
-import {NamePath} from "antd/es/form/interface";
-import {
-    DEFAULT_FILE_FIELD_NAME,
-    DEFAULT_IMAGE_URL_FIELD_NAME,
-    DEFAULT_UPLOAD_IMAGE_FIELD_NAME
-} from "@/features/upload-image/constant";
-import {useCallback, useState} from "react";
+import {Upload} from 'antd'
+import {CustomFormItem} from "@/features/sclub-member";
+import {ServedImage} from "@/features/upload-image";
+import {UploadImageFormFieldProps} from "@/features/upload-image/types";
+import {useUploadImageFormField} from "@/features/upload-image/hooks";
 
 
-type UploadImageFormFieldProps = {
+export const UploadImageFormField = (props: UploadImageFormFieldProps) => {
 
-    imageUrlFieldName?: NamePath, fileUrlFieldName?: NamePath
-} & FormItemProps
+    const {
+        uploadProps,
+        uploadButtonRules,
+        isUploading,
+        file,
+        name,
+        fileUrlFieldName,
+        imageUrlFieldName,
+        required,
+        restProps
+    } = useUploadImageFormField(props)
 
-
-export const UploadImageFormField = ({
-                                         name = DEFAULT_UPLOAD_IMAGE_FIELD_NAME,
-                                         imageUrlFieldName = DEFAULT_IMAGE_URL_FIELD_NAME,
-                                         fileUrlFieldName = DEFAULT_FILE_FIELD_NAME
-                                     }: UploadImageFormFieldProps) => {
-    const form = useFormInstance()
-    const [file, setFile] = useState<Blob>(form.getFieldValue([name, fileUrlFieldName]))
-    const imageUrl = useCallback(() => {
-        return getImageUrl(form.getFieldValue([name, imageUrlFieldName]))
-    }, [form, imageUrlFieldName, name])
-
-    console.log(file, imageUrl, setFile)
-
-
-    return <div>Upload Image field</div>
+    return <CustomFormItem name={name} required={required} rules={uploadButtonRules} {...restProps}>
+        <CustomFormItem name={[name, imageUrlFieldName]}>
+            <CustomFormItem name={[name, fileUrlFieldName]} className={'h-12'}>
+                <Upload {...uploadProps}>
+                    <ServedImage fileSrc={!isUploading ? file : undefined} width={100} height={100}/>
+                </Upload>
+            </CustomFormItem>
+        </CustomFormItem>
+    </CustomFormItem>
 }

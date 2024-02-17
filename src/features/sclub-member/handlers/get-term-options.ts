@@ -1,21 +1,21 @@
-import { OptionType } from '@/features/sclub-member/types'
+import {TOptions} from '@/features/sclub-member/types'
 
 const FIRST_YEAR = 2009
 
-export const getTermOptions = (): OptionType[] => {
-  const currentYear = new Date().getFullYear()
+export const getTermOptions = (): TOptions[] => {
+    const currentYear = new Date().getFullYear()
 
-  const options: OptionType[] = []
+    const options: TOptions[] = []
 
-  for (let i = currentYear; i > FIRST_YEAR; i--) {
-    const fromYear = i
-    const toYear = i + 1
+    for (let i = currentYear; i > FIRST_YEAR; i--) {
+        const fromYear = i
+        const toYear = i + 1
 
-    options.push({
-      label: `${fromYear} - ${toYear}`,
-      value: `${fromYear} - ${toYear}`,
-    })
-  }
+        options.push({
+            label: `${fromYear} - ${toYear}`,
+            value: `${fromYear} - ${toYear}`,
+        })
+    }
 
-  return options
+    return options
 }
