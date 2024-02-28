@@ -1,10 +1,10 @@
 import {
-    SCLUB_MEMBER_KEYS,
-    SCLUB_ROLES,
+  SCLUB_MEMBER_KEYS,
+  SCLUB_POSITIONS,
 } from '@/features/sclub-member/constant'
 
-export type TRole = keyof typeof SCLUB_ROLES
+export type TRole = keyof typeof SCLUB_POSITIONS
 export type TRoles = {
-    [SCLUB_MEMBER_KEYS.TERM]: string
-    [SCLUB_MEMBER_KEYS.ROLE]: TRole
+  [SCLUB_MEMBER_KEYS.TERM]: string
+  [SCLUB_MEMBER_KEYS.ROLE]: TRole
 }

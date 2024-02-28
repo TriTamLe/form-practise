@@ -1,4 +1,4 @@
-export * from './house'
-export * from './member-type'
-export * from './roles'
 export * from './gender.ts'
+export * from './houses'
+export * from './member-type'
+export * from './position.ts'
